@@ -10,96 +10,97 @@ class Countdown extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
             body,
-html {
-    height: 100%;
-    min-height: 100%;
-}
+            html {
+                height: 100%;
+                min-height: 100%;
+            }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    background: url("https://images.unsplash.com/photo-1472148083604-64f1084980b9?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=")
-        no-repeat center center / cover;
-    color: white;
-}
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 8px;
+                background: url("https://images.unsplash.com/photo-1472148083604-64f1084980b9?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=")
+                    no-repeat center center / cover;
+                color: white;
+            }
 
-.countdown-container {
-    display: flex;
-    width: 100%;
-    max-width: 70%;
-    justify-content: space-between;
-}
+            .countdown-container {
+                display: flex;
+                width: 100%;
+                max-width: 90%;
+                justify-content: space-between;
+            }
 
-.days-container,
-.hours-container,
-.minutes-container,
-.seconds-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    width: 140px;
-    height: 140px;
-    border-radius: 99px;
-}
+            .days-container,
+            .hours-container,
+            .minutes-container,
+            .seconds-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.1);
+                border: 5px solid rgba(255, 255, 255, 0.3);
+                width: 50px;
+                height: 50px;
+                border-radius: 99px;
+            }
 
-.days,
-.hours,
-.minutes,
-.seconds {
-    font-size: 2.5em;
-    margin: 10px 0;
-}
+            .days,
+            .hours,
+            .minutes,
+            .seconds {
+                font-size:12px;
+                font-weight: bold;
+            }
 
-.days-label,
-.hours-label,
-.minutes-label,
-.seconds-label {
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
+            .days-label,
+            .hours-label,
+            .minutes-label,
+            .seconds-label {
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                font-size: 12px;
+            }
 
-@media (max-width: 800px) {
-    .countdown-container {
-        max-width: 90%;
-    }
+            @media (max-width: 800px) {
+                .countdown-container {
+                    max-width: 90%;
+                }
 
-    .days-container,
-    .hours-container,
-    .minutes-container,
-    .seconds-container {
-        font-size: 0.8em;
-        width: 100px;
-        height: 100px;
-    }
-}
- </style>
+                .days-container,
+                .hours-container,
+                .minutes-container,
+                .seconds-container {
+                    font-size: 12px;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            </style>
             <section class="countdown-container">
-    
+
             <div class="days-container">
                 <div class="days"></div>
                 <div class="days-label">days</div>
             </div>
-            
+
             <div class="hours-container">
                 <div class="hours"></div>
                 <div class="hours-label">hours</div>
             </div>
-            
+
             <div class="minutes-container">
                 <div class="minutes"></div>
-                <div class="minutes-label">minutes</div>
+                <div class="minutes-label">min</div>
             </div>
-            
+
             <div class="seconds-container">
                 <div class="seconds"></div>
-                <div class="seconds-label">seconds</div>
+                <div class="seconds-label">sec</div>
             </div>
-            
+
             </section>
         `;
     }
