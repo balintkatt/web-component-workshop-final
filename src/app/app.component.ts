@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import "../assets/countdown.js";
 import "../assets/modal.js";
+import "../assets/tooltip.js";
 
 @Component({
   selector: 'app-root',

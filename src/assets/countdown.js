@@ -1,8 +1,5 @@
 class Countdown extends HTMLElement {
     connectedCallback() {
-        var userName = this.attributes.setStartCountdown.value;
-        console.log("username", userName);
-        this._setStartCountdown(userName)
     }
     constructor() {
         super();
@@ -151,22 +148,7 @@ class Countdown extends HTMLElement {
             seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
     }
 
-    _setStartCountdown(days) {
-        console.log("days", days);
-        const countDownClock = (number = 100, format = "seconds") => {
-            this._convertFormat(number, format);
-        };
-
-        /*
-            start countdown
-            enter number and format
-            days, hours, minutes or seconds
-          */
-        countDownClock(days, "days");
-    }
-
     set setStartCountdown(days) {
-        console.log("days", days);
         const countDownClock = (number = 100, format = "seconds") => {
             this._convertFormat(number, format);
         };
