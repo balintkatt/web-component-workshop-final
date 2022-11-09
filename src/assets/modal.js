@@ -74,7 +74,7 @@ class Modal extends HTMLElement {
           }
           .modal-body {padding: 2px 16px; margin: 20px 2px}
       </style>
-      <button>DETAILS</button>
+      <button><slot name="button"/></button>
       <div class="modal">
           <div class="modal-content">
               <div class="modal-header">

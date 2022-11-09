@@ -331,13 +331,13 @@
           </div>
           <p class="product-type">{{item.product_type}}</p>
           <div class="product-review" *ngIf="item.product_name">
-            <my-component id="myComponent" 
-                          maxValue="5" 
-                          value="0" 
-                          numberOfComments="{{item.product_no_of_comments}}" 
-                          emptyStarIcon="&#9734;" 
-                          fullStarIcon="&#11088;" 
-                          titleOfComment="" 
+            <my-component id="myComponent"
+                          maxValue="5"
+                          value="0"
+                          numberOfComments="{{item.product_no_of_comments}}"
+                          emptyStarIcon="&#9734;"
+                          fullStarIcon="&#11088;"
+                          titleOfComment=""
                           productName="Rate me!">
             </my-component>
           </div>
@@ -350,6 +350,7 @@
       </div>
       <mat-card-actions class="actions">
         <details-modal>
+          <span class="button" slot="button">DETAILS</span>
           <h1 slot="header">{{item.product_name}}</h1>
               <div class="flex">
                 <img class="product-image" src="{{item.product_image_sm}}">
