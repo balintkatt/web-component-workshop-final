@@ -317,12 +317,6 @@
 </div>
 
 <div class="content" role="main">
-  <!-- <rating-widget id="myRatingComponent" max-value="4" value="0" number-of-comments="189" empty-star-icon="&#9674;" full-star-icon="&#9830;" title-of-comment="" product-name="Nexttech"></rating-widget> -->
-  <!-- <my-component
-    first="PranavA"
-    last="Sarda, Hope you like my article ❤️!"
-  ></my-component> -->
-  <my-component id="myComponent" max-value="4" value="0" number-of-comments="189" empty-star-icon="&#9674;" full-star-icon="&#9830;" title-of-comment="" product-name="Nexttech"></my-component>
   <div *ngFor="let item of mockData; let i=index" class="flex">
     <mat-card class="product-card">
       <div class="flex">
@@ -336,6 +330,17 @@
             </wc-tooltip>
           </div>
           <p class="product-type">{{item.product_type}}</p>
+          <div class="product-review" *ngIf="item.product_name">
+            <my-component id="myComponent" 
+                          maxValue="5" 
+                          value="0" 
+                          numberOfComments="{{item.product_no_of_comments}}" 
+                          emptyStarIcon="&#9734;" 
+                          fullStarIcon="&#11088;" 
+                          titleOfComment="" 
+                          productName="Rate me!">
+            </my-component>
+          </div>
           <p>{{item.product_description}}</p>
         </mat-card-content>
       </div>

@@ -23,7 +23,7 @@
       "dom"
     ],
     "paths": {
-      "@web-components/*": ["../web-components/*"]
+      "@web-component-workshop-stencil/*": ["../web-component-workshop-stencil/*"]
     }
   },
   "angularCompilerOptions": {

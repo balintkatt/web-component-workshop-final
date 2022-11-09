@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 
-import { defineCustomElements } from "@web-components/loader";
+import { defineCustomElements } from "@web-component-workshop-stencil/loader";
 
 import { MyComponent } from "./stencil-generated/proxies";
 
